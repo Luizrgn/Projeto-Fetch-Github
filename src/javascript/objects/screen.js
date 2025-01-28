@@ -1,30 +1,30 @@
-const tela = {
-    usuarioPerfil: document.querySelector('.perfil-data'),
-    renderUser(usuarioObjeto){
-        this.usuarioPerfil.innerHTML =/* codigo html dentro do javascript!*/ 
+const screen = {
+    userProfile: document.querySelector('.profile-data'),
+    renderUser(userObject){
+        this.userProfile.innerHTML =/* codigo html dentro do javascript!*/ 
                                  `<div class="info">
-                                  <img src="${usuarioObjeto.avatarUrl}" alt="Foto do perfil de usuário" />
+                                  <img src="${userObject.avatarUrl}" alt="Foto do perfil de usuário" />
                                   <div class="data">
-                                         <h1>${usuarioObjeto.name ?? 'não possui nome cadastrado 😥.'}</h1>
-                                         <p>${usuarioObjeto.bio ?? 'não possui bio cadastrada 😥.'}</p>
+                                         <h1>${userObject.name ?? 'não possui nome cadastrado 😥.'}</h1>
+                                         <p>${userObject.bio ?? 'não possui bio cadastrada 😥.'}</p>
                                   </div>
                                   </div>` /* codigo html dentro do javascript!*/
                                   
-        let repositoriosItens = ''
-        usuarioObjeto.repositorios.forEach(repo => repositoriosItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
+        let repositoriesItens = ''
+        userObject.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
 
-        if(usuarioObjeto.repositorios.length > 0){
-            this.usuarioPerfil.innerHTML += `<div class = repositories section>
+        if(userObject.repositories.length > 0){
+            this.userProfile.innerHTML += `<div class = repositories section>
                                               <h2>Repositórios</h2>
-                                              <ul>${repositoriosItens}</ul>
+                                              <ul>${repositoriesItens}</ul>
                                             </div>`
         }
 
     },
 
     renderNotFound(){
-        this.usuarioPerfil.innerHTML = "<h3>Usuário não encontrado!</h3>"
+        this.userProfile.innerHTML = "<h3>Usuário não encontrado!</h3>"
     }
 }
 
-export { tela }
+export { screen }

@@ -60,7 +60,7 @@ main {
   margin-bottom: 30px;
 }
 
-.container header #input-buscar {
+.container header #input-search {
   width: 400px;
   font-size: 17px;
   margin: 0 auto;
@@ -69,7 +69,7 @@ main {
   border: 1px solid grey;
 }
 
-.container header #botao-buscar {
+.container header #btn-search {
   width: 200px;
   font-size: 17px;
   margin: 20px auto 0;
@@ -79,43 +79,43 @@ main {
   border: 1px solid grey;
 }
 
-.container header #botao-buscar:hover {
+.container header #btn-search:hover {
   background-color: hotpink;
   color: #ffffff;
   border-color: #ffffff;
 }
 
-.container .perfil-data{
+.container .profile-data{
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;  
 }
 
-.container .perfil-data .info {
+.container .profile-data .info {
   display: flex;  
   flex-wrap: wrap;
   align-items: center;
 }
 
-.container .perfil-data .info .data{
+.container .profile-data .info .data{
   padding: 40px;
   width: 50%;
 }
 
-.container .perfil-data .info img{
+.container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
   border: 10px solid hotpink;
 }
 
-.container .perfil-data .info h1{
+.container .profile-data .info h1{
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.container .perfil-data .info p{
+.container .profile-data .info p{
   font-size: 15px;  
   font-weight: 400;
   line-height: 23px;
@@ -123,18 +123,18 @@ main {
 
 /* REPOSITORIES */
 
-.container .perfil-data .repositories h2{
+.container .profile-data .repositories h2{
   margin-bottom: 30px;
   text-align: center;
 }
 
-.container .perfil-data .repositories ul{
+.container .profile-data .repositories ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.container .perfil-data .repositories ul li a{
+.container .profile-data .repositories ul li a{
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
@@ -143,12 +143,12 @@ main {
   transition: 0.3s ease-in-out;
 }
 
-.container .perfil-data .repositories ul li a:hover{
+.container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
 }
 
-.container .perfil-data.hide{
+.container .profile-data.hide{
   display: none;
 }
 
@@ -170,8 +170,8 @@ main {
 }
 
 @media (max-width: 768px) {
-  .container header #input-buscar,
-  .container header #botao-buscar
+  .container header #input-search,
+  .container header #btn-search
   {
     width: 100%;
   }

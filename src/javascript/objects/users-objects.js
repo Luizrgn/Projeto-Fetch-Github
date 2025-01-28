@@ -1,4 +1,4 @@
-const usuarioObjeto = {
+const userObject = {
     avatarUrl: '',
     name: '',
     bio: '',
@@ -10,9 +10,9 @@ const usuarioObjeto = {
         this.bio = githubUser.bio
         this.userName = githubUser.login
     },
-    setRepositorios(repositories){
-        this.repositorios = repositories
+    setRepositories(repositories){
+        this.repositories = repositories
     }
 }
 
-export { usuarioObjeto }
+export { userObject }
