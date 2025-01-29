@@ -1,8 +1,10 @@
 import { user } from "../javascript/services/users.js"
 import { repositories } from "../javascript/services/repositories.js"
+import { events } from "../javascript/services/events.js"
 
 import { userObject } from "../javascript/objects/users-objects.js"
 import { screen } from "../javascript/objects/screen.js"
+
 
 
 document.getElementById('btn-search') .addEventListener('click', () => {
@@ -40,26 +42,15 @@ async function getUserData(userName) {
         return
     }
 
-    const repositoriesResponse = await repositories(userName)
+    const repositoriesResponse = await repositories(userName) // Busca os repositórios
+    const eventsResponse = await events(userName);  // Busca os eventos
 
     
     userObject.setInfo(userResponse)  // Preenche as informações no objeto usuarioObjeto
     userObject.setRepositories(repositoriesResponse)  // Preenche as informações no objeto usuarioObjeto
+    userObject.setEvents(eventsResponse);  // Preenche os eventos no objeto
+
     screen.renderUser(userObject)  // Passa usuarioObjeto para a tela
+    screen.renderEvents(userObject.events);  // Exibe os eventos na tela
     
 }
-
-// function getRepositoriosdoUsuario(userName){
-//     repositorios(userName) .then(reposData => {
-//         let repositoriosItens = ""
-
-//         reposData.forEach(repo => {
-//             repositoriosItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
-//         })
-
-//         document.querySelector('.profile-data').innerHTML +=  `<div class="repositories section">
-//                                                                 <h2>Repositorios</h2>
-//                                                                 <ul>${repositoriosItens}</ul>
-//                                                               </div>`
-//     })
-// }

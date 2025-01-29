@@ -134,14 +134,40 @@ main {
   justify-content: center;
 }
 
+.container .profile-data .repositories ul li{
+  padding: 20px;
+  border: 1px solid grey;
+  margin: 20px;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .container .profile-data .repositories ul li a{
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.container .profile-data .repositories ul li i{
+  background-color: rgb(80, 3, 153);
+  padding: 5px 10px;
+  color: #FFFFFF;
+  font-size: 13px;
+  word-spacing: 5px;
+}
+
+
+/* .container .profile-data .repositories ul li a {
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
   display: block;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
-}
+} */
 
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
